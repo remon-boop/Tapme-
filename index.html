@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Me - Your Story in a Tap</title>
+    <meta name="description" content="Tap Me sells customizable NFC keychains that let you share information with a simple tap.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/tap me .png" alt="Tap Me Logo" class="logo">
+                <div class="brand-text">
+                    <h1>Tap Me</h1>
+                    <p class="tagline">Your Story in a Tap</p>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#order" class="nav-link">Order</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-container">
+            <div class="animated-bg"></div>
+            <div class="particles">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Tap Me – Your Story in a Tap</h2>
+                <p>Share your memories, links, and information instantly with customizable NFC keychains.</p>
+                <a href="#order" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Ready Products</h2>
+            
+            <div class="filter-container">
+                <select id="product-filter" class="product-filter">
+                    <option value="all">All Products</option>
+                    <option value="couple">Couple</option>
+                    <option value="cartoon">Cartoon</option>
+                    <option value="logo">Logo</option>
+                </select>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="cartoon">
+                    <div class="product-image">
+                        <div class="placeholder-image cartoon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cartoon Keychain</h3>
+                        <p class="price">৳399</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Cartoon Keychain for ৳399" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Cartoon Keychain" data-price="৳399">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="couple">
+                    <div class="product-image">
+                        <div class="placeholder-image couple">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Couple Keychain</h3>
+                        <p class="price">৳599</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Couple Keychain for ৳599" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Couple Keychain" data-price="৳599">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="logo">
+                    <div class="product-image">
+                        <div class="placeholder-image logo">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Business Logo Keychain</h3>
+                        <p class="price">৳499</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Business Logo Keychain for ৳499" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Business Logo Keychain" data-price="৳499">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="cartoon">
+                    <div class="product-image">
+                        <div class="placeholder-image cartoon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cartoon Keychain</h3>
+                        <p class="price">৳449</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Premium Cartoon Keychain for ৳449" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Premium Cartoon Keychain" data-price="৳449">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Tap the keychain</h3>
+                    <p>Simply tap the NFC keychain against your smartphone</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Your phone opens the assigned link</h3>
+                    <p>The NFC chip automatically triggers your phone to open the programmed link</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Share or surprise someone instantly</h3>
+                    <p>Share your social media, portfolio, contact info, or a special message</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="how-it-works features">
+        <div class="container">
+            <h2 class="section-title">NFC Keychain Features</h2>
+            <p class="features-intro">Customize your Tap Me keychain to do exactly what you need:</p>
+            <div class="steps features-steps">
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Open Instagram</h3>
+                    <p>Link directly to your Instagram profile or a specific post with a single tap</p>
+                </div>
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Play YouTube Video</h3>
+                    <p>Launch your favorite video, playlist or YouTube channel instantly</p>
+                </div>
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Show Resume or Portfolio</h3>
+                    <p>Showcase your professional work or resume to potential employers or clients</p>
+                </div>
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Reveal Love Note or Gift Message</h3>
+                    <p>Add a personal touch to gifts with a special message or surprise</p>
+                </div>
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Start WhatsApp Chat</h3>
+                    <p>Open a direct chat with your WhatsApp number for quick communication</p>
+                </div>
+                <div class="step feature-step fade-in">
+                    <div class="step-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Open Facebook Profile</h3>
+                    <p>Direct visitors to your Facebook profile or business page</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section id="order" class="order">
+        <div class="container">
+            <h2 class="section-title">Custom Order</h2>
+            <p>Want something unique? Order a custom design!</p>
+            
+            <form id="custom-order-form" class="order-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Design Description</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="upload" class="file-upload-label">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="upload" name="upload" class="file-upload-input" accept="image/*">
+                    <span id="file-name" class="file-name">No file chosen</span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="social-links">
+                <a href="https://wa.me/8801789053188" class="social-icon" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1AmKsMcneX/" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tap Me. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801789053188" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Need help? Tap to chat!</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

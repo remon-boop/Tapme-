@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- Red circular background -->
+  <circle cx="150" cy="150" r="140" fill="#e01e2b"/>
+  
+  <!-- Keychain with smiley face -->
+  <g>
+    <!-- Keychain ring -->
+    <circle cx="75" cy="150" r="25" fill="none" stroke="#000" stroke-width="8"/>
+    
+    <!-- Keychain connector -->
+    <path d="M75 125 Q75 100 95 100" fill="none" stroke="#000" stroke-width="8"/>
+    
+    <!-- Keychain body (circular) -->
+    <circle cx="125" cy="150" r="40" fill="#e01e2b" stroke="#000" stroke-width="4"/>
+    
+    <!-- Smiley face eyes -->
+    <circle cx="110" cy="140" r="5" fill="#000"/>
+    <circle cx="140" cy="140" r="5" fill="#000"/>
+    
+    <!-- Smiley face smile -->
+    <path d="M105 165 Q125 180 145 165" fill="none" stroke="#000" stroke-width="4"/>
+  </g>
+  
+  <!-- Tap me text -->
+  <g>
+    <!-- "Tap" text -->
+    <path d="M150 120 L190 120 M170 120 L170 180" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M200 130 Q220 120 235 130 Q250 140 250 160 Q250 180 235 190 Q220 200 200 190 Q190 185 190 175 L190 130" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- "me" text -->
+    <path d="M150 200 L150 240 Q150 250 160 250 Q170 250 170 240 L170 200" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 220 Q190 210 205 220 Q220 230 220 250 L220 200" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Sparkle icon -->
+  <path d="M260 90 L270 100 L280 90 L270 80 Z" fill="#e01e2b" stroke="#000" stroke-width="2"/>
+</svg>

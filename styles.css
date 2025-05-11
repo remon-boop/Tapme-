@@ -1,0 +1,868 @@
+/* ================ Base Styles ================ */
+:root {
+    --primary-color: #e01e2b;
+    --secondary-color: #ffffff;
+    --dark-color: #222222;
+    --light-color: #f8f8f8;
+    --gray-color: #6c757d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--secondary-color);
+    letter-spacing: 0.2px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: #b01522;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-color);
+}
+
+/* ================ Buttons ================ */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #b01522;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* ================ Header & Navigation ================ */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 15px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.brand-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--gray-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* ================ Hero Section ================ */
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    margin-top: 85px;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Lighter overlay to see animations better */
+    z-index: 1;
+}
+
+/* Particle animation */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: move 15s linear infinite;
+}
+
+.particles span:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+.particles span:nth-child(2) {
+    top: 60%;
+    left: 40%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+.particles span:nth-child(3) {
+    top: 40%;
+    left: 60%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 4s;
+    animation-duration: 25s;
+}
+
+.particles span:nth-child(4) {
+    top: 80%;
+    left: 80%;
+    width: 12px;
+    height: 12px;
+    animation-delay: 6s;
+    animation-duration: 30s;
+}
+
+.particles span:nth-child(5) {
+    top: 30%;
+    left: 70%;
+    width: 18px;
+    height: 18px;
+    animation-delay: 1s;
+    animation-duration: 28s;
+}
+
+.particles span:nth-child(6) {
+    top: 70%;
+    left: 30%;
+    width: 16px;
+    height: 16px;
+    animation-delay: 7s;
+    animation-duration: 22s;
+}
+
+.particles span:nth-child(7) {
+    top: 50%;
+    left: 90%;
+    width: 14px;
+    height: 14px;
+    animation-delay: 3s;
+    animation-duration: 19s;
+}
+
+.particles span:nth-child(8) {
+    top: 10%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    animation-delay: 5s;
+    animation-duration: 23s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw) scale(0.2);
+        opacity: 0.1;
+    }
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-bg:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.12) 0%, transparent 30%);
+    animation: rotate 30s linear infinite;
+}
+
+.animated-bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.05) 40%, transparent 100%),
+        linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.05) 60%, transparent 100%);
+    animation: shine 5s ease-in-out infinite alternate, wave 15s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% 0%, 0% 0%;
+    }
+    100% {
+        background-position: 200% 200%, 100% 100%;
+    }
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+
+/* Removed duplicate animations */
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================ How It Works Section ================ */
+.how-it-works {
+    background-color: white;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(224, 30, 43, 0.15);
+    transition: var(--transition);
+    border: 1px solid rgba(224, 30, 43, 0.1);
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    margin-bottom: 15px;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================ Products Section ================ */
+.filter-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-filter {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(224, 30, 43, 0.15);
+    transition: var(--transition);
+    border: 1px solid rgba(224, 30, 43, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.placeholder-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 50px;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .placeholder-image {
+    transform: scale(1.1);
+}
+
+.cartoon {
+    background-color: #ff9800;
+}
+
+.couple {
+    background-color: #e91e63;
+}
+
+.logo {
+    background-color: #ffffff;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* ================ Order Section ================ */
+.order {
+    background-color: white;
+    text-align: center;
+}
+
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(224, 30, 43, 0.15);
+    border: 1px solid rgba(224, 30, 43, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(224, 30, 43, 0.3);
+    border-radius: 4px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(224, 30, 43, 0.2);
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 3px 6px rgba(224, 30, 43, 0.3);
+}
+
+.file-upload-label:hover {
+    background-color: #b01522;
+}
+
+.file-upload-input {
+    position: absolute;
+    left: -9999px;
+}
+
+.file-name {
+    display: block;
+    margin-top: 10px;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* ================ Contact Section ================ */
+.contact {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.social-icon:nth-child(1):hover {
+    background-color: #ffffff;
+}
+
+.social-icon:nth-child(2):hover {
+    background-color: #3b5998;
+}
+
+.social-icon:nth-child(3):hover {
+    background-color: #c13584;
+}
+
+/* ================ Footer ================ */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+/* ================ Floating WhatsApp Button ================ */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    transition: var(--transition);
+    animation: pulse 2s infinite;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    color: white;
+    animation: none;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    background-color: white;
+    color: var(--dark-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.whatsapp-tooltip:after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+.floating-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Share Button */
+.btn-share {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-share:hover {
+    background-color: #b01522;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(224, 30, 43, 0.3);
+}
+
+/* ================ Features Section ================ */
+.features {
+    background-color: white;
+    padding-top: 40px;
+}
+
+.features-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.features-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature-step {
+    min-width: 200px;
+}
+
+.feature-step .step-icon {
+    color: var(--primary-color);
+}
+
+.feature-step h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ================ Responsive Design ================ */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 85px;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .hero {
+        padding: 100px 0;
+        margin-top: 85px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .steps {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
