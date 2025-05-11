@@ -135,7 +135,8 @@ header .container {
 }
 
 .logo {
-    height: 70px;
+    height: 60px;
+    width: auto;
     margin-right: 15px;
     background-color: white;
     padding: 5px;
