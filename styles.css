@@ -20,7 +20,8 @@ html {
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+}
     font-size: 16px;
     line-height: 1.6;
     color: var(--dark-color);
