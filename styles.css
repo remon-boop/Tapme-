@@ -1003,10 +1003,10 @@ footer {
 .nfc-icon {
   width: 100px !important;
   height: auto !important;
-  padding: 0px;
-  background-color: #ffecec;
-  border-radius: 12px;
-  object-fit: contain;
-  display: block;
+  max-height: 100px;
+  padding: 0;
   margin: 0 auto 12px;
+  display: block;
+  background-color: transparent;
+  border-radius: 12px;
 }
