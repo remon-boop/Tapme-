@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tap Me - Your Story in a Tap</title>
     <meta name="description" content="Tap Me sells customizable NFC keychains that let you share information with a simple tap.">
-    
+
   <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -44,6 +44,14 @@
         </div>
     </header>
 
+  <div class="hero-section">
+  <img src="HERO.gif" alt="Tap Me Animation" class="hero-gif">
+  <div class="hero-content">
+    <h1>Tap Me</h1>
+    <p>Your Story in a Tap</p>
+    <a href="#order" class="btn">Order Now</a>
+  </div>
+</div>
    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="video-container">
@@ -70,52 +78,105 @@
     </section>
 
     <!-- Products Section -->
-   <!-- Toothless Keychain -->
-<div class="product-card" data-category="cartoon">
-  <img src="toothless.png" alt="Toothless Keychain">
-  <h3>Toothless Keychain</h3>
-  <p>399৳</p>
-  <p class="features">Includes NFC tag to share your contact, Instagram, YouTube, or custom links in a tap.</p>
-</div>
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Ready Products</h2>
 
-<!-- Hedgehog in Pot -->
-<div class="product-card" data-category="cartoon">
-  <img src="hedgehog.png" alt="Hedgehog in Pot">
-  <h3>Hedgehog in a Pot</h3>
-  <p>399৳</p>
-  <p class="features">Cute and compact. NFC tag can link to resumes, portfolios, love notes, or event invites.</p>
-</div>
+            <div class="filter-container">
+                <select id="product-filter" class="product-filter">
+                    <option value="all">All Products</option>
+                    <option value="couple">Couple</option>
+                    <option value="cartoon">Cartoon</option>
+                    <option value="logo">Logo</option>
+                </select>
+            </div>
 
-<!-- Among Us Red -->
-<div class="product-card" data-category="cartoon">
-  <img src="amongus.png" alt="Among Us Red Keychain">
-  <h3>Among Us Red</h3>
-  <p>399৳</p>
-  <p class="features">Imposter or crewmate — tap this and reveal a surprise link, Instagram, or message.</p>
-</div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="cartoon">
+                    <div class="product-image">
+                        <div class="placeholder-image cartoon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cartoon Keychain</h3>
+                        <p class="price">৳399</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Cartoon Keychain for ৳399" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Cartoon Keychain" data-price="৳399">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
 
-<!-- Hello Kitty Style -->
-<div class="product-card" data-category="cartoon">
-  <img src="hellokitty.png" alt="Hello Kitty Keychain">
-  <h3>Hello Kitty Style</h3>
-  <p>399৳</p>
-  <p class="features">Perfect gift! NFC lets you send a sweet message, Instagram, or YouTube playlist instantly.</p>
-</div>
+                <!-- Product 2 -->
+                <div class="product-card" data-category="couple">
+                    <div class="product-image">
+                        <div class="placeholder-image couple">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Couple Keychain</h3>
+                        <p class="price">৳599</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Couple Keychain for ৳599" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Couple Keychain" data-price="৳599">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
 
-<!-- Minion Style -->
-<div class="product-card" data-category="cartoon">
-  <img src="minion.png" alt="Minion Keychain">
-  <h3>Minion Style</h3>
-  <p>399৳</p>
-  <p class="features">This fun keychain packs an NFC tag that launches your links, contact info, or a prank video.</p>
-</div>
+                <!-- Product 3 -->
+                <div class="product-card" data-category="logo">
+                    <div class="product-image">
+                        <div class="placeholder-image logo">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Business Logo Keychain</h3>
+                        <p class="price">৳499</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Business Logo Keychain for ৳499" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Business Logo Keychain" data-price="৳499">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="cartoon">
+                    <div class="product-image">
+                        <div class="placeholder-image cartoon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cartoon Keychain</h3>
+                        <p class="price">৳449</p>
+                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Premium Cartoon Keychain for ৳449" class="btn btn-primary" target="_blank">
+                            Order Now <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <button class="btn btn-share" data-product="Premium Cartoon Keychain" data-price="৳449">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- How It Works Section -->
 <section id="how-it-works" class="nfc-keychain-features">
   <div class="container">
     <h2 class="section-title">How It Works</h2>
     <div class="features-grid">
-      
+
       <div class="feature-card">
         <img src="tap.png" alt="Tap Phone" class="nfc-icon">
         <p>Tap your phone on the keychain</p>
@@ -134,7 +195,7 @@
     </div>
   </div>
 </section>
-    
+
   <!-- NFC Keychain Features Section -->
 <section class="nfc-keychain-features">
   <div class="container">
@@ -173,23 +234,23 @@
         <div class="container">
             <h2 class="section-title">Custom Order</h2>
             <p>Want something unique? Order a custom design!</p>
-            
+
             <form id="custom-order-form" class="order-form">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="description">Design Description</label>
                     <textarea id="description" name="description" rows="4" required></textarea>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="upload" class="file-upload-label">
                         <i class="fas fa-upload"></i> Upload Image
@@ -197,7 +258,7 @@
                     <input type="file" id="upload" name="upload" class="file-upload-input" accept="image/*">
                     <span id="file-name" class="file-name">No file chosen</span>
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary">Submit Order</button>
             </form>
         </div>
