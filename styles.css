@@ -1001,7 +1001,7 @@ footer {
   border-color: #ff4d4d;
 }
 .feature-card img {
-  width: 100px;
+  width: 300px;
   height: 100px;
   object-fit: contain;
   border-radius: 12px;
