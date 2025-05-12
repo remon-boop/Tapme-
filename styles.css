@@ -871,3 +871,47 @@ footer {
 .nfc-feature { ... }
 .nfc-feature img { ... }
 .nfc-feature:hover { ... }
+.nfc-keychain-features {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background-color: #fff5f5;
+  border: 2px solid #ffe0e0;
+  border-radius: 16px;
+  padding: 20px;
+  width: 160px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feature-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  border-color: #ff4d4d;
+}
