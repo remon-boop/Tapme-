@@ -1011,3 +1011,44 @@ footer {
   background-color: transparent;
   border-radius: 12px;
 }
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 24px;
+  background-color: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
