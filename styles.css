@@ -1000,12 +1000,13 @@ footer {
   transform: scale(1.05);
   border-color: #ff4d4d;
 }
-.feature-card img {
-  width: 80px !important;
-  height: 80px !important;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 12px;
+.nfc-icon {
+  width: 100px !important;
+  height: 100px !important;
+  padding: 6px;
   background-color: #ffecec;
-  padding: 4px;
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
 }
