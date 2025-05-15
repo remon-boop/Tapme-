@@ -1318,7 +1318,7 @@ footer {
 }
 .product-image img {
   width: 100%;
-  height: auto;
+  height: 250PX;
   object-fit: cover;
   border-radius: 8px;
   display: block;
