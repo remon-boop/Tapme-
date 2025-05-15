@@ -1299,3 +1299,20 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+.product-card .description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Product Image Hover Animation */
+.product-img {
+  transition: transform 0.4s ease, filter 0.3s ease;
+  border-radius: 8px;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
