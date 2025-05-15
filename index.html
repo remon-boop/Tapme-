@@ -63,22 +63,52 @@
 
 <!-- Products Section -->
 <section id="products" class="products">
-    <div class="container">
-        <h2 class="section-title">Ready Products</h2>
+  <div class="container">
+    <h2 class="section-title">Ready Products</h2>
 
-        <div class="filter-container">
-            <select id="product-filter" class="product-filter">
-                <option value="all">All Products</option>
-                <option value="couple">Couple</option>
-                <option value="cartoon">Cartoon</option>
-                <option value="logo">Logo</option>
-            </select>
-        </div>
-
-        <div class="product-grid">
-            <!-- Products go here (no structural or functional code will be changed in this step) -->
-        </div>
+    <div class="filter-container">
+      <select id="product-filter" class="product-filter">
+        <option value="all">All Products</option>
+        <option value="couple">Couple</option>
+        <option value="cartoon">Cartoon</option>
+        <option value="logo">Logo</option>
+      </select>
     </div>
+
+    <!-- Product Grid Start -->
+    <div class="product-grid">
+      
+      <!-- Sample Product 1 -->
+      <div class="product-card" data-category="cartoon">
+        <div class="product-image product-img">
+          <img src="toothless1.png" alt="Toothless Dragon Keychain" />
+        </div>
+        <div class="product-info">
+          <h3>Toothless Dragon</h3>
+          <p class="price">৳399</p>
+          <p class="description">Includes an NFC chip — tap to share your resume, social profile, or event pass!</p>
+          <a href="https://wa.me/8801789053188?text=Hi! I want to order Toothless Dragon Keychain for ৳399" class="btn btn-primary" target="_blank">Order Now <i class="fab fa-whatsapp"></i></a>
+          <button class="btn btn-share" data-product="Toothless Dragon" data-price="৳399"><i class="fas fa-share-alt"></i> Share</button>
+        </div>
+      </div>
+
+      <!-- Sample Product 2 -->
+      <div class="product-card" data-category="cartoon">
+        <div class="product-image product-img">
+          <img src="minion12.png" alt="Minion Keychain" />
+        </div>
+        <div class="product-info">
+          <h3>Minion</h3>
+          <p class="price">৳399</p>
+          <p class="description">Includes an NFC chip — tap to share your resume, social profile, or event pass!</p>
+          <a href="https://wa.me/8801789053188?text=Hi! I want to order Minion Keychain for ৳399" class="btn btn-primary" target="_blank">Order Now <i class="fab fa-whatsapp"></i></a>
+          <button class="btn btn-share" data-product="Minion" data-price="৳399"><i class="fas fa-share-alt"></i> Share</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- Product Grid End -->
+  </div>
 </section>
 
 <!-- How It Works Section -->
