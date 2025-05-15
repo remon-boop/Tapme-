@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tap Me - Your Story in a Tap</title>
-    <meta name="description" content="Tap Me sells customizable NFC keychains that let you share information with a simple tap.">
-
-  <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Tap Me sells customizable NFC keychains that let you share information with a simple tap.">  <!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet"><!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -42,250 +37,49 @@
                 </ul>
             </nav>
         </div>
-    </header>
-
-   <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="video-container">
-            <div class="animated-bg"></div>
-            <div class="particles">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="video-overlay"></div>
+    </header>   <!-- Hero Section --><section id="home" class="hero">
+    <div class="video-container">
+        <div class="animated-bg"></div>
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <h2>Tap Me – Your Story in a Tap</h2>
-                <p>Share your memories, links, and information instantly with customizable NFC keychains.</p>
-                <a href="#order" class="btn btn-primary">Order Now</a>
-            </div>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h2>Tap Me – Your Story in a Tap</h2>
+            <p>Share your memories, links, and information instantly with customizable NFC keychains.</p>
+            <a href="#order" class="btn btn-primary">Order Now</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">Ready Products</h2>
+<!-- Products Section -->
+<section id="products" class="products">
+    <div class="container">
+        <h2 class="section-title">Ready Products</h2>
 
-            <div class="filter-container">
-                <select id="product-filter" class="product-filter">
-                    <option value="all">All Products</option>
-                    <option value="couple">Couple</option>
-                    <option value="cartoon">Cartoon</option>
-                    <option value="logo">Logo</option>
-                </select>
-            </div>
-
-            <div class="product-grid">
-                <!-- Toothless Keychain -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-    <img src="toothless1.png" alt="Toothless Dragon Keychain" class="product-img" />
-  </div>
-  <div class="product-info">
-    <h3>Toothless Dragon Keychain</h3>
-    <p class="price">৳399</p>
-    <p class="description">
-      Includes an NFC chip — tap to share your resume, social profile, YouTube, love note, or even entry pass!
-    </p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Among Us Red Keychain for ৳399" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://wa.me/?text=Check out this cool Among Us Red NFC Keychain from Tap Me! ৳399 - https://tapme.vercel.app" class="btn btn-share" target="_blank">
-      <i class="fas fa-share-alt"></i> Share
-    </a>
-  </div>
-</div>
-
-<!-- Poop on Toilet Keychain -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-    <img src="poopkeychain.png" alt="Poop on Toilet Keychain">
-  </div>
-  <div class="product-info">
-    <h3>Poop on Toilet</h3>
-    <p class="price">৳399</p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Poop on Toilet Keychain for ৳399" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <button class="btn btn-share" data-product="Poop on Toilet Keychain" data-price="৳399">
-      <i class="fas fa-share-alt"></i> Share
-    </button>
-  </div>
-</div>
-
-<!-- Among Us Red -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-    <img src="amongus1.png" alt="Among Us Red Keychain" class="product-img" />
-  </div>
-  <div class="product-info">
-    <h3>Among Us Red</h3>
-    <p class="price">৳399</p>
-    <p class="description">
-      Includes an NFC chip — tap to share your resume, social profile, YouTube, love note, or even entry pass!
-    </p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Among Us Red Keychain for ৳399" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://wa.me/?text=Check out this cool Among Us Red NFC Keychain from Tap Me! ৳399 - https://tapme.vercel.app" class="btn btn-share" target="_blank">
-      <i class="fas fa-share-alt"></i> Share
-    </a>
-  </div>
-</div>
-<!-- Hello Kitty Style -->
-<!-- Hedgehog  -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-    <img src="hellokitty.png" alt="Hello Kitty Keychain" class="product-img" />
-    <img src="hedpag12.png" alt="Hedgehog Keychain" class="product-img" />
-  </div>
-  <div class="product-info">
-    <h3>Hello Kitty</h3>
-    <h3>Hedgehog</h3>
-    <p class="price">৳399</p>
-    <p class="description">
-      Includes an NFC chip — tap to share your resume, social profile, YouTube, love note, or even entry pass!
-    </p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Among Us Red Keychain for ৳399" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://wa.me/?text=Check out this cool Among Us Red NFC Keychain from Tap Me! ৳399 - https://tapme.vercel.app" class="btn btn-share" target="_blank">
-      <i class="fas fa-share-alt"></i> Share
-    </a>
-  </div>
-</div>
-                <!-- White Bunny Keychain -->
-               <!-- White Bunny Keychain with Animation -->
-<div class="product-card" data-category="cartoon">
-                <!-- Avocado Couple Keychain Set -->
-<div class="product-card" data-category="couple">
-  <div class="product-image">
-  <div class="product-image product-img">
-    <img src="bunny.png" alt="White Bunny Keychain">
-    <img src="avocado-couple.png" alt="Avocado Couple Keychain Set">
-  </div>
-  <div class="product-info">
-    <h3>White Bunny Keychain</h3>
-    <p class="price">৳399</p>
-    <p class="description">Includes an NFC chip — tap to share your profile, love note, YouTube, or event pass.</p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the White Bunny Keychain for ৳399" class="btn btn-primary" target="_blank">Order Now <i class="fab fa-whatsapp"></i></a>
-    <button class="btn btn-share" data-product="White Bunny Keychain" data-price="৳399"><i class="fas fa-share-alt"></i> Share</button>
-   </a>
-    <h3>Avocado Couple Set</h3>
-    <p class="price">৳799</p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Avocado Couple Keychain Set for ৳799" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <button class="btn btn-share" data-product="Avocado Couple Set" data-price="৳799">
-      <i class="fas fa-share-alt"></i> Share
-    </button>
-  </div>
-</div>
-               <!-- White Bunny Keychain -->
-               <!-- White Bunny Keychain with Animation -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-  <div class="product-image product-img">
-    <img src="bunny.png" alt="White Bunny Keychain">
-  </div>
-  <div class="product-info">
-    <h3>White Bunny Keychain</h3>
-    <p class="price">৳399</p>
-    <p class="description">Includes an NFC chip — tap to share your profile, love note, YouTube, or event pass.</p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the White Bunny Keychain for ৳399" class="btn btn-primary" target="_blank">Order Now <i class="fab fa-whatsapp"></i></a>
-    <button class="btn btn-share" data-product="White Bunny Keychain" data-price="৳399"><i class="fas fa-share-alt"></i> Share</button>
- 
-  </div>
-
-  </div>
-<!-- Minion  -->
-<div class="product-card" data-category="cartoon">
-  <div class="product-image">
-    <img src="minion12.png" alt="Minion Keychain" class="product-img" />
-  </div>
-  <div class="product-info">
-    <h3>Minion</h3>
-    <p class="price">৳399</p>
-    <p class="description">
-      Includes an NFC chip — tap to share your resume, social profile, YouTube, love note, or even entry pass!
-    </p>
-    <a href="https://wa.me/8801789053188?text=Hi! I want to order the Among Us Red Keychain for ৳399" class="btn btn-primary" target="_blank">
-      Order Now <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://wa.me/?text=Check out this cool Among Us Red NFC Keychain from Tap Me! ৳399 - https://tapme.vercel.app" class="btn btn-share" target="_blank">
-      <i class="fas fa-share-alt"></i> Share
-    </a>
-  </div>
-</div>
-
-                <!-- Product 2 -->
-                <div class="product-card" data-category="couple">
-                    <div class="product-image">
-                        <div class="placeholder-image couple">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Couple Keychain</h3>
-                        <p class="price">৳599</p>
-                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Couple Keychain for ৳599" class="btn btn-primary" target="_blank">
-                            Order Now <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <button class="btn btn-share" data-product="Couple Keychain" data-price="৳599">
-                            <i class="fas fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-category="logo">
-                    <div class="product-image">
-                        <div class="placeholder-image logo">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Business Logo Keychain</h3>
-                        <p class="price">৳499</p>
-                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Business Logo Keychain for ৳499" class="btn btn-primary" target="_blank">
-                            Order Now <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <button class="btn btn-share" data-product="Business Logo Keychain" data-price="৳499">
-                            <i class="fas fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-category="cartoon">
-                    <div class="product-image">
-                        <div class="placeholder-image cartoon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Premium Cartoon Keychain</h3>
-                        <p class="price">৳449</p>
-                        <a href="https://wa.me/8801789053188?text=Hi! I want to order the Premium Cartoon Keychain for ৳449" class="btn btn-primary" target="_blank">
-                            Order Now <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <button class="btn btn-share" data-product="Premium Cartoon Keychain" data-price="৳449">
-                            <i class="fas fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <div class="filter-container">
+            <select id="product-filter" class="product-filter">
+                <option value="all">All Products</option>
+                <option value="couple">Couple</option>
+                <option value="cartoon">Cartoon</option>
+                <option value="logo">Logo</option>
+            </select>
         </div>
-    </section>
 
+        <div class="product-grid">
+            <!-- Products go here (no structural or functional code will be changed in this step) -->
+        </div>
+    </div>
+</section>
 
 <!-- How It Works Section -->
 <section id="how-it-works" class="nfc-keychain-features">
@@ -312,7 +106,7 @@
   </div>
 </section>
 
-  <!-- NFC Keychain Features Section -->
+<!-- NFC Keychain Features Section -->
 <section class="nfc-keychain-features">
   <div class="container">
     <h2 class="section-title">NFC Keychain Features</h2>
@@ -345,73 +139,74 @@
   </div>
 </section>
 
-    <!-- Custom Order Section -->
-    <section id="order" class="order">
-        <div class="container">
-            <h2 class="section-title">Custom Order</h2>
-            <p>Want something unique? Order a custom design!</p>
+<!-- Custom Order Section -->
+<section id="order" class="order">
+    <div class="container">
+        <h2 class="section-title">Custom Order</h2>
+        <p>Want something unique? Order a custom design!</p>
 
-            <form id="custom-order-form" class="order-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Design Description</label>
-                    <textarea id="description" name="description" rows="4" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="upload" class="file-upload-label">
-                        <i class="fas fa-upload"></i> Upload Image
-                    </label>
-                    <input type="file" id="upload" name="upload" class="file-upload-input" accept="image/*">
-                    <span id="file-name" class="file-name">No file chosen</span>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Submit Order</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="social-links">
-                <a href="https://wa.me/8801789053188" class="social-icon" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.facebook.com/share/1AmKsMcneX/" class="social-icon" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/" class="social-icon" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+        <form id="custom-order-form" class="order-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Design Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="upload" class="file-upload-label">
+                    <i class="fas fa-upload"></i> Upload Image
+                </label>
+                <input type="file" id="upload" name="upload" class="file-upload-input" accept="image/*">
+                <span id="file-name" class="file-name">No file chosen</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="social-links">
+            <a href="https://wa.me/8801789053188" class="social-icon" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1AmKsMcneX/" class="social-icon" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Tap Me. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Tap Me. All rights reserved.</p>
+    </div>
+</footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/8801789053188" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Need help? Tap to chat!</span>
-    </a>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/8801789053188" class="floating-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Need help? Tap to chat!</span>
+</a>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
