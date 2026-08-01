@@ -4,56 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>SleepyCat — cozy home for cat people</title>
-    <meta name="description" content="SleepyCat is a cozy Gen Z cat community: browse breeds, adopt cats, post lost kitties, and review cat food. No algorithms, just cats.">
-    <meta name="theme-color" content="#ffb385">
+    <meta name="description" content="SleepyCat is a cozy cat community: browse breeds, adopt cats, post lost kitties, and review cat food. No algorithms, just cats.">
+    <meta name="theme-color" content="#ff6b4a">
+    <meta property="og:title" content="SleepyCat — cozy home for cat people">
+    <meta property="og:description" content="Browse breeds, adopt cats, post lost kitties, and review cat food.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='23' r='13' fill='%23ff6b4a'/%3E%3Cpath d='M9 13 L6 4 L16 10 Z' fill='%23f2542f'/%3E%3Cpath d='M31 13 L34 4 L24 10 Z' fill='%23f2542f'/%3E%3Cpath d='M14 23 q3 3 6 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 23 q3 3 6 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- ============ LOADING SCREEN (sleeping cat) ============ -->
+    <!-- ============ LOADER ============ -->
     <div id="loader" class="loader" aria-hidden="false">
         <div class="loader-inner">
             <svg class="sleepy-cat" viewBox="0 0 200 150" role="img" aria-label="A sleeping cat">
-                <!-- floating Zzz -->
                 <text class="zzz z1" x="150" y="45">z</text>
                 <text class="zzz z2" x="163" y="32">z</text>
                 <text class="zzz z3" x="176" y="22">Z</text>
-                <!-- body (breathes) -->
-                <g class="cat-body-grp">
-                    <ellipse class="cat-body" cx="95" cy="110" rx="70" ry="34"/>
-                </g>
-                <!-- tail (twitches) -->
+                <g class="cat-body-grp"><ellipse class="cat-body" cx="95" cy="110" rx="70" ry="34"/></g>
                 <path class="cat-tail" d="M25 112 q-24 4 -20 -22 q3 -16 16 -12" fill="none"/>
-                <!-- head resting on body -->
                 <g class="cat-head">
                     <circle class="cat-face" cx="142" cy="98" r="30"/>
                     <path class="cat-ear" d="M120 78 l-6 -22 l20 12 Z"/>
                     <path class="cat-ear" d="M164 78 l6 -22 l-20 12 Z"/>
-                    <!-- closed sleepy eyes -->
                     <path class="cat-eye" d="M128 96 q6 6 12 0"/>
                     <path class="cat-eye" d="M148 96 q6 6 12 0"/>
-                    <!-- nose + smile -->
                     <path class="cat-nose" d="M141 104 l6 0 l-3 4 Z"/>
                     <path class="cat-mouth" d="M144 108 q-5 5 -10 1 M144 108 q5 5 10 1"/>
-                    <!-- whiskers -->
                     <path class="cat-whisk" d="M126 104 l-18 -3 M126 108 l-18 3"/>
                     <path class="cat-whisk" d="M162 104 l18 -3 M162 108 l18 3"/>
                 </g>
             </svg>
-            <p class="loader-text">SleepyCat<span class="loader-dots"><i>.</i><i>.</i><i>.</i></span></p>
+            <p class="loader-text" id="loaderName">SleepyCat<span class="loader-dots"><i>.</i><i>.</i><i>.</i></span></p>
             <p class="loader-sub">waking up the kitties</p>
         </div>
     </div>
 
     <!-- ============ HEADER ============ -->
     <header id="header">
-        <a href="#" class="brand" data-section="home" aria-label="SleepyCat home">
-            <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 40 40"><circle cx="20" cy="22" r="14" class="bm-face"/><path d="M9 12 l-3 -9 l10 6 Z" class="bm-ear"/><path d="M31 12 l3 -9 l-10 6 Z" class="bm-ear"/><path d="M14 22 q3 3 6 0" class="bm-eye"/><path d="M22 22 q3 3 6 0" class="bm-eye"/></svg>
-            </span>
-            <span class="brand-name">SleepyCat</span>
+        <a href="#" class="brand" data-section="home" aria-label="Home">
+            <span class="brand-mark" id="brandMark" aria-hidden="true">🐱</span>
+            <span class="brand-name" id="brandName">SleepyCat</span>
         </a>
         <nav class="top-nav">
             <button class="nav-link" data-section="breed">Breeds</button>
@@ -61,11 +54,16 @@
             <button class="nav-link" data-section="lost">Lost Cats</button>
             <button class="nav-link" data-section="food">Food Reviews</button>
         </nav>
-        <button class="saved-btn" data-section="saved" aria-label="Saved cats">
-            <span class="heart-ico" aria-hidden="true">♥</span>
-            <span class="saved-count" id="savedCount">0</span>
-        </button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        <div class="header-actions">
+            <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="moon" aria-hidden="true">🌙</span><span class="sun" aria-hidden="true">☀️</span>
+            </button>
+            <button class="icon-btn saved-btn" data-section="saved" aria-label="Saved cats">
+                <span aria-hidden="true">♥</span>
+                <span class="saved-count" id="savedCount">0</span>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
     </header>
     <div class="mobile-nav" id="mobileNav">
         <button class="nav-link" data-section="breed">🐱 Breeds</button>
@@ -76,140 +74,198 @@
     </div>
 
     <main id="main">
-        <!-- ============ HOME ============ -->
+        <!-- HOME -->
         <section class="view" id="view-home">
-            <div class="hero">
-                <div class="hero-blob b1"></div>
-                <div class="hero-blob b2"></div>
-                <div class="hero-blob b3"></div>
-                <div class="hero-content">
-                    <span class="pill">😴 no algorithms · just cats</span>
-                    <h1 class="hero-title">A cozy little corner<br>for <span class="grad">cat people</span>.</h1>
-                    <p class="hero-lede">Browse breeds, adopt a floof, help find lost kitties, and rate the food they actually deign to eat. You contact owners directly — no matching magic, just vibes.</p>
-                    <div class="hero-cta">
-                        <button class="btn btn-primary" data-section="adopt">Find a cat 🐾</button>
-                        <button class="btn btn-ghost" data-section="lost">Report a lost cat</button>
+            <div class="hero" id="hero">
+                <div class="hero-bg" id="heroBg" hidden></div>
+                <div class="hero-blob b1"></div><div class="hero-blob b2"></div><div class="hero-blob b3"></div>
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <span class="pill" id="heroPill">😴 no algorithms · just cats</span>
+                        <h1 class="hero-title" id="heroTitle">A cozy little corner for <span class="grad">cat people</span>.</h1>
+                        <p class="hero-lede" id="heroLede">Browse breeds, adopt a floof, help find lost kitties, and rate the food they actually deign to eat. Contact owners directly — no matching magic, just vibes.</p>
+                        <div class="hero-cta">
+                            <button class="btn btn-primary" data-section="adopt">Find a cat 🐾</button>
+                            <button class="btn btn-ghost" data-section="lost">Report a lost cat</button>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-cat" aria-hidden="true">
-                    <div class="floaty">🐈</div>
-                </div>
+                <div class="hero-cat" aria-hidden="true"><div class="floaty" id="heroCat">🐈</div></div>
             </div>
 
+            <div class="home-stats" id="homeStats"></div>
+
             <div class="home-cards">
-                <button class="home-card hc-breed" data-section="breed">
-                    <span class="hc-emoji">🐱</span>
-                    <h3>Breed Listings</h3>
-                    <p>Meet cats posted by other owners — breed, age, vaccination & location.</p>
-                    <span class="hc-go">Browse →</span>
-                </button>
-                <button class="home-card hc-adopt" data-section="adopt">
-                    <span class="hc-emoji">🏡</span>
-                    <h3>Adopt a Cat</h3>
-                    <p>Kitties looking for a forever home. Like, save, and message the owner.</p>
-                    <span class="hc-go">Adopt →</span>
-                </button>
-                <button class="home-card hc-lost" data-section="lost">
-                    <span class="hc-emoji">🔍</span>
-                    <h3>Lost Cats</h3>
-                    <p>Free board to post & search lost kitties. Last seen, photo, description.</p>
-                    <span class="hc-go">Help find →</span>
-                </button>
-                <button class="home-card hc-food" data-section="food">
-                    <span class="hc-emoji">🍽️</span>
-                    <h3>Food Reviews</h3>
-                    <p>Real ratings & reviews of cat food, sorted by top-rated.</p>
-                    <span class="hc-go">Read reviews →</span>
-                </button>
+                <button class="home-card hc-breed" data-section="breed"><span class="hc-ico">🐱</span><h3>Breed Listings</h3><p>Meet cats posted by owners — breed, age, vaccination &amp; location.</p><span class="hc-go">Browse →</span></button>
+                <button class="home-card hc-adopt" data-section="adopt"><span class="hc-ico">🏡</span><h3>Adopt a Cat</h3><p>Kitties looking for a forever home. Like, save &amp; message the owner.</p><span class="hc-go">Adopt →</span></button>
+                <button class="home-card hc-lost" data-section="lost"><span class="hc-ico">🔍</span><h3>Lost Cats</h3><p>Free board to post &amp; search lost kitties near you.</p><span class="hc-go">Help find →</span></button>
+                <button class="home-card hc-food" data-section="food"><span class="hc-ico">🍽️</span><h3>Food Reviews</h3><p>Real ratings &amp; reviews of cat food, sorted by top-rated.</p><span class="hc-go">Read reviews →</span></button>
             </div>
         </section>
 
-        <!-- ============ BREED ============ -->
+        <!-- BREED -->
         <section class="view" id="view-breed" hidden>
-            <div class="view-head">
-                <div>
-                    <h2 class="view-title">🐱 Breed Listings</h2>
-                    <p class="view-sub">Cats posted by their humans. See one you love? Message them directly.</p>
-                </div>
-            </div>
+            <div class="view-head"><div><h2 class="view-title">🐱 Breed Listings</h2><p class="view-sub">Cats posted by their humans. See one you love? Message them directly.</p></div></div>
             <div class="toolbar">
-                <input type="search" class="search" data-grid="breedGrid" placeholder="Search breed, location…">
+                <div class="search-wrap"><input type="search" class="search" data-grid="breedGrid" placeholder="Search breed, location…"></div>
                 <select class="filter" data-grid="breedGrid" data-field="breed" id="breedFilter"></select>
             </div>
             <div class="grid" id="breedGrid"></div>
         </section>
 
-        <!-- ============ ADOPT ============ -->
+        <!-- ADOPT -->
         <section class="view" id="view-adopt" hidden>
-            <div class="view-head">
-                <div>
-                    <h2 class="view-title">🏡 Adopt a Cat</h2>
-                    <p class="view-sub">These floofs need a forever home. Save your faves, then reach out to the owner.</p>
-                </div>
-            </div>
+            <div class="view-head"><div><h2 class="view-title">🏡 Adopt a Cat</h2><p class="view-sub">These floofs need a forever home. Save your faves, then reach out to the owner.</p></div></div>
             <div class="toolbar">
-                <input type="search" class="search" data-grid="adoptGrid" placeholder="Search name, breed, city…">
+                <div class="search-wrap"><input type="search" class="search" data-grid="adoptGrid" placeholder="Search name, breed, city…"></div>
                 <select class="filter" data-grid="adoptGrid" data-field="breed" id="adoptFilter"></select>
             </div>
             <div class="grid" id="adoptGrid"></div>
         </section>
 
-        <!-- ============ LOST ============ -->
+        <!-- LOST -->
         <section class="view" id="view-lost" hidden>
-            <div class="view-head">
-                <div>
-                    <h2 class="view-title">🔍 Lost Cats <span class="free-tag">free</span></h2>
-                    <p class="view-sub">Seen one of these kitties? Contact the owner. Lost yours? Post it below.</p>
-                </div>
-                <button class="btn btn-primary sm" id="openLostForm">+ Post a lost cat</button>
-            </div>
-            <div class="toolbar">
-                <input type="search" class="search" data-grid="lostGrid" placeholder="Search area, color, name…">
-            </div>
+            <div class="view-head"><div><h2 class="view-title">🔍 Lost Cats <span class="pill-tag">free</span></h2><p class="view-sub">Seen one of these kitties? Contact the owner. Lost yours? Post it below.</p></div><button class="btn btn-primary sm" id="openLostForm">+ Post a lost cat</button></div>
+            <div class="toolbar"><div class="search-wrap"><input type="search" class="search" data-grid="lostGrid" placeholder="Search area, color, name…"></div></div>
             <div class="grid" id="lostGrid"></div>
         </section>
 
-        <!-- ============ FOOD ============ -->
+        <!-- FOOD -->
         <section class="view" id="view-food" hidden>
-            <div class="view-head">
-                <div>
-                    <h2 class="view-title">🍽️ Cat Food Reviews</h2>
-                    <p class="view-sub">Honest ratings from real cat parents, sorted by top-rated.</p>
-                </div>
-                <button class="btn btn-primary sm" id="openFoodForm">+ Write a review</button>
-            </div>
+            <div class="view-head"><div><h2 class="view-title">🍽️ Cat Food Reviews</h2><p class="view-sub">Honest ratings from real cat parents, sorted by top-rated.</p></div><button class="btn btn-primary sm" id="openFoodForm">+ Write a review</button></div>
             <div class="toolbar">
-                <input type="search" class="search" id="foodSearch" placeholder="Search a food or brand…">
-                <select class="filter" id="foodSort">
-                    <option value="top">Top rated</option>
-                    <option value="new">Newest</option>
-                    <option value="low">Lowest rated</option>
-                </select>
+                <div class="search-wrap"><input type="search" class="search" id="foodSearch" placeholder="Search a food or brand…"></div>
+                <select class="filter" id="foodSort"><option value="top">Top rated</option><option value="new">Newest</option><option value="low">Lowest rated</option></select>
             </div>
             <div class="reviews" id="foodList"></div>
         </section>
 
-        <!-- ============ SAVED ============ -->
+        <!-- SAVED -->
         <section class="view" id="view-saved" hidden>
-            <div class="view-head">
-                <div>
-                    <h2 class="view-title">♥ Saved Cats</h2>
-                    <p class="view-sub">Everything you've liked across Breeds &amp; Adopt lives here.</p>
+            <div class="view-head"><div><h2 class="view-title">♥ Saved Cats</h2><p class="view-sub">Everything you've liked across Breeds &amp; Adopt lives here.</p></div></div>
+            <div class="grid" id="savedGrid"></div>
+        </section>
+
+        <!-- ADMIN -->
+        <section class="view" id="view-admin" hidden>
+            <div class="admin-head">
+                <div><h2 class="view-title">⚙️ Admin Panel<span class="admin-badge">owner</span></h2><p class="view-sub">Customize your site's branding, appearance, and listings. Changes save to this browser.</p></div>
+                <button class="btn btn-ghost sm" data-section="home">← Back to site</button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-atab="brand">Branding</button>
+                <button class="admin-tab" data-atab="appear">Appearance</button>
+                <button class="admin-tab" data-atab="content">Listings</button>
+                <button class="admin-tab" data-atab="data">Data</button>
+            </div>
+
+            <!-- Branding -->
+            <div class="admin-panel active" id="apanel-brand">
+                <div class="admin-section">
+                    <h3>Logo &amp; name</h3>
+                    <p class="sec-sub">Shown in the header and loading screen.</p>
+                    <div class="logo-preview"><div class="lp-box" id="logoPreview">🐱</div>
+                        <div><div class="seg" id="logoTypeSeg"><button data-lt="emoji" class="on">Emoji</button><button data-lt="image">Image</button></div></div>
+                    </div>
+                    <div class="field" id="logoEmojiField"><label>Logo emoji</label><input id="in-logoEmoji" maxlength="4" placeholder="🐱"></div>
+                    <div class="field" id="logoImageField" hidden><label>Logo image</label>
+                        <label class="file-btn">📁 Upload image<input type="file" accept="image/*" id="in-logoImage"></label>
+                        <p class="hint">Square images look best. Stored in this browser.</p>
+                    </div>
+                    <div class="field"><label>Site name</label><input id="in-siteName" placeholder="SleepyCat"></div>
+                    <div class="field"><label>Tagline / pill text</label><input id="in-pill" placeholder="😴 no algorithms · just cats"></div>
+                </div>
+                <div class="admin-section">
+                    <h3>Hero banner</h3>
+                    <p class="sec-sub">The big intro on the home page.</p>
+                    <div class="field"><label>Headline</label><input id="in-heroTitle" placeholder="A cozy little corner for cat people."></div>
+                    <div class="field"><label>Subtext</label><textarea id="in-heroLede"></textarea></div>
+                    <div class="field-row">
+                        <div class="field"><label>Hero cat emoji</label><input id="in-heroCat" maxlength="4" placeholder="🐈"></div>
+                        <div class="field"><label>Banner image (optional)</label><label class="file-btn">📁 Upload<input type="file" accept="image/*" id="in-heroBg"></label></div>
+                    </div>
+                    <button class="btn btn-danger sm" id="clearHeroBg" hidden>Remove banner image</button>
+                </div>
+                <div class="admin-section">
+                    <h3>Footer</h3>
+                    <div class="field"><label>Footer text</label><input id="in-footer" placeholder="Made with 🧶 for cat people"></div>
                 </div>
             </div>
-            <div class="grid" id="savedGrid"></div>
+
+            <!-- Appearance -->
+            <div class="admin-panel" id="apanel-appear">
+                <div class="admin-section">
+                    <h3>Accent color</h3>
+                    <p class="sec-sub">The main brand color across buttons, links &amp; highlights.</p>
+                    <div class="swatches" id="swatches"></div>
+                    <div class="field-row" style="margin-top:16px">
+                        <div class="field"><label>Custom color</label><input type="color" id="in-accent" style="height:46px;padding:4px"></div>
+                    </div>
+                </div>
+                <div class="admin-section">
+                    <h3>Default theme</h3>
+                    <p class="sec-sub">Which mode new visitors see first. They can still toggle.</p>
+                    <div class="seg" id="themeSeg"><button data-tm="system" class="on">System</button><button data-tm="light">Light</button><button data-tm="dark">Dark</button></div>
+                </div>
+            </div>
+
+            <!-- Listings -->
+            <div class="admin-panel" id="apanel-content">
+                <div class="admin-section">
+                    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+                        <div><h3 style="margin:0">Manage listings</h3><p class="sec-sub" style="margin:0">Add, edit, or remove cards in each section.</p></div>
+                        <button class="btn btn-primary sm" id="adminAddBtn">+ Add new</button>
+                    </div>
+                    <div class="admin-sub-tabs" id="contentTabs">
+                        <button data-ct="breed" class="on">🐱 Breeds</button>
+                        <button data-ct="adopt">🏡 Adopt</button>
+                        <button data-ct="lost">🔍 Lost</button>
+                        <button data-ct="food">🍽️ Food</button>
+                    </div>
+                    <div class="admin-list" id="adminList"></div>
+                </div>
+            </div>
+
+            <!-- Data -->
+            <div class="admin-panel" id="apanel-data">
+                <div class="admin-section">
+                    <h3>Security PIN</h3>
+                    <p class="sec-sub">Required to open this admin panel. Client-side only — not bank-grade security.</p>
+                    <div class="field"><label>Admin PIN</label><input id="in-pin" inputmode="numeric" placeholder="1234"></div>
+                </div>
+                <div class="admin-section">
+                    <h3>Backup &amp; reset</h3>
+                    <p class="sec-sub">Export your whole setup to a file, restore it, or start fresh.</p>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap">
+                        <button class="btn btn-ghost sm" id="exportBtn">⬇ Export setup</button>
+                        <label class="btn btn-ghost sm" style="cursor:pointer">⬆ Import setup<input type="file" accept="application/json" id="importInput" hidden></label>
+                        <button class="btn btn-danger sm" id="resetBtn">↺ Reset everything</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="save-bar">
+                <button class="btn btn-ghost sm" id="adminPreview">👁 Preview</button>
+                <button class="btn btn-primary sm" id="adminSave">Save changes</button>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Made with 🧶 for cat people · SleepyCat</p>
+        <div class="footer-links">
+            <button data-section="home">Home</button>
+            <button data-section="breed">Breeds</button>
+            <button data-section="adopt">Adopt</button>
+            <button data-section="food">Food</button>
+            <button id="adminLink">⚙️ Admin</button>
+        </div>
+        <p id="footerText">Made with 🧶 for cat people · SleepyCat</p>
         <p class="footer-fine">Browse-only demo — contact owners directly. No matching, no tracking, just cats.</p>
     </footer>
 
-    <!-- ============ MODAL ROOT ============ -->
     <div class="modal-root" id="modalRoot" hidden>
         <div class="modal-backdrop" id="modalBackdrop"></div>
-        <div class="modal-card" id="modalCard" role="dialog" aria-modal="true">
+        <div class="modal-card" role="dialog" aria-modal="true">
             <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
             <div id="modalContent"></div>
         </div>
