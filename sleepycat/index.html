@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>SleepyCat — cozy home for cat people</title>
+    <meta name="description" content="SleepyCat is a cozy Gen Z cat community: browse breeds, adopt cats, post lost kitties, and review cat food. No algorithms, just cats.">
+    <meta name="theme-color" content="#ffb385">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============ LOADING SCREEN (sleeping cat) ============ -->
+    <div id="loader" class="loader" aria-hidden="false">
+        <div class="loader-inner">
+            <svg class="sleepy-cat" viewBox="0 0 200 150" role="img" aria-label="A sleeping cat">
+                <!-- floating Zzz -->
+                <text class="zzz z1" x="150" y="45">z</text>
+                <text class="zzz z2" x="163" y="32">z</text>
+                <text class="zzz z3" x="176" y="22">Z</text>
+                <!-- body (breathes) -->
+                <g class="cat-body-grp">
+                    <ellipse class="cat-body" cx="95" cy="110" rx="70" ry="34"/>
+                </g>
+                <!-- tail (twitches) -->
+                <path class="cat-tail" d="M25 112 q-24 4 -20 -22 q3 -16 16 -12" fill="none"/>
+                <!-- head resting on body -->
+                <g class="cat-head">
+                    <circle class="cat-face" cx="142" cy="98" r="30"/>
+                    <path class="cat-ear" d="M120 78 l-6 -22 l20 12 Z"/>
+                    <path class="cat-ear" d="M164 78 l6 -22 l-20 12 Z"/>
+                    <!-- closed sleepy eyes -->
+                    <path class="cat-eye" d="M128 96 q6 6 12 0"/>
+                    <path class="cat-eye" d="M148 96 q6 6 12 0"/>
+                    <!-- nose + smile -->
+                    <path class="cat-nose" d="M141 104 l6 0 l-3 4 Z"/>
+                    <path class="cat-mouth" d="M144 108 q-5 5 -10 1 M144 108 q5 5 10 1"/>
+                    <!-- whiskers -->
+                    <path class="cat-whisk" d="M126 104 l-18 -3 M126 108 l-18 3"/>
+                    <path class="cat-whisk" d="M162 104 l18 -3 M162 108 l18 3"/>
+                </g>
+            </svg>
+            <p class="loader-text">SleepyCat<span class="loader-dots"><i>.</i><i>.</i><i>.</i></span></p>
+            <p class="loader-sub">waking up the kitties</p>
+        </div>
+    </div>
+
+    <!-- ============ HEADER ============ -->
+    <header id="header">
+        <a href="#" class="brand" data-section="home" aria-label="SleepyCat home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 40 40"><circle cx="20" cy="22" r="14" class="bm-face"/><path d="M9 12 l-3 -9 l10 6 Z" class="bm-ear"/><path d="M31 12 l3 -9 l-10 6 Z" class="bm-ear"/><path d="M14 22 q3 3 6 0" class="bm-eye"/><path d="M22 22 q3 3 6 0" class="bm-eye"/></svg>
+            </span>
+            <span class="brand-name">SleepyCat</span>
+        </a>
+        <nav class="top-nav">
+            <button class="nav-link" data-section="breed">Breeds</button>
+            <button class="nav-link" data-section="adopt">Adopt</button>
+            <button class="nav-link" data-section="lost">Lost Cats</button>
+            <button class="nav-link" data-section="food">Food Reviews</button>
+        </nav>
+        <button class="saved-btn" data-section="saved" aria-label="Saved cats">
+            <span class="heart-ico" aria-hidden="true">♥</span>
+            <span class="saved-count" id="savedCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </header>
+    <div class="mobile-nav" id="mobileNav">
+        <button class="nav-link" data-section="breed">🐱 Breeds</button>
+        <button class="nav-link" data-section="adopt">🏡 Adopt</button>
+        <button class="nav-link" data-section="lost">🔍 Lost Cats</button>
+        <button class="nav-link" data-section="food">🍽️ Food Reviews</button>
+        <button class="nav-link" data-section="saved">♥ Saved</button>
+    </div>
+
+    <main id="main">
+        <!-- ============ HOME ============ -->
+        <section class="view" id="view-home">
+            <div class="hero">
+                <div class="hero-blob b1"></div>
+                <div class="hero-blob b2"></div>
+                <div class="hero-blob b3"></div>
+                <div class="hero-content">
+                    <span class="pill">😴 no algorithms · just cats</span>
+                    <h1 class="hero-title">A cozy little corner<br>for <span class="grad">cat people</span>.</h1>
+                    <p class="hero-lede">Browse breeds, adopt a floof, help find lost kitties, and rate the food they actually deign to eat. You contact owners directly — no matching magic, just vibes.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" data-section="adopt">Find a cat 🐾</button>
+                        <button class="btn btn-ghost" data-section="lost">Report a lost cat</button>
+                    </div>
+                </div>
+                <div class="hero-cat" aria-hidden="true">
+                    <div class="floaty">🐈</div>
+                </div>
+            </div>
+
+            <div class="home-cards">
+                <button class="home-card hc-breed" data-section="breed">
+                    <span class="hc-emoji">🐱</span>
+                    <h3>Breed Listings</h3>
+                    <p>Meet cats posted by other owners — breed, age, vaccination & location.</p>
+                    <span class="hc-go">Browse →</span>
+                </button>
+                <button class="home-card hc-adopt" data-section="adopt">
+                    <span class="hc-emoji">🏡</span>
+                    <h3>Adopt a Cat</h3>
+                    <p>Kitties looking for a forever home. Like, save, and message the owner.</p>
+                    <span class="hc-go">Adopt →</span>
+                </button>
+                <button class="home-card hc-lost" data-section="lost">
+                    <span class="hc-emoji">🔍</span>
+                    <h3>Lost Cats</h3>
+                    <p>Free board to post & search lost kitties. Last seen, photo, description.</p>
+                    <span class="hc-go">Help find →</span>
+                </button>
+                <button class="home-card hc-food" data-section="food">
+                    <span class="hc-emoji">🍽️</span>
+                    <h3>Food Reviews</h3>
+                    <p>Real ratings & reviews of cat food, sorted by top-rated.</p>
+                    <span class="hc-go">Read reviews →</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ============ BREED ============ -->
+        <section class="view" id="view-breed" hidden>
+            <div class="view-head">
+                <div>
+                    <h2 class="view-title">🐱 Breed Listings</h2>
+                    <p class="view-sub">Cats posted by their humans. See one you love? Message them directly.</p>
+                </div>
+            </div>
+            <div class="toolbar">
+                <input type="search" class="search" data-grid="breedGrid" placeholder="Search breed, location…">
+                <select class="filter" data-grid="breedGrid" data-field="breed" id="breedFilter"></select>
+            </div>
+            <div class="grid" id="breedGrid"></div>
+        </section>
+
+        <!-- ============ ADOPT ============ -->
+        <section class="view" id="view-adopt" hidden>
+            <div class="view-head">
+                <div>
+                    <h2 class="view-title">🏡 Adopt a Cat</h2>
+                    <p class="view-sub">These floofs need a forever home. Save your faves, then reach out to the owner.</p>
+                </div>
+            </div>
+            <div class="toolbar">
+                <input type="search" class="search" data-grid="adoptGrid" placeholder="Search name, breed, city…">
+                <select class="filter" data-grid="adoptGrid" data-field="breed" id="adoptFilter"></select>
+            </div>
+            <div class="grid" id="adoptGrid"></div>
+        </section>
+
+        <!-- ============ LOST ============ -->
+        <section class="view" id="view-lost" hidden>
+            <div class="view-head">
+                <div>
+                    <h2 class="view-title">🔍 Lost Cats <span class="free-tag">free</span></h2>
+                    <p class="view-sub">Seen one of these kitties? Contact the owner. Lost yours? Post it below.</p>
+                </div>
+                <button class="btn btn-primary sm" id="openLostForm">+ Post a lost cat</button>
+            </div>
+            <div class="toolbar">
+                <input type="search" class="search" data-grid="lostGrid" placeholder="Search area, color, name…">
+            </div>
+            <div class="grid" id="lostGrid"></div>
+        </section>
+
+        <!-- ============ FOOD ============ -->
+        <section class="view" id="view-food" hidden>
+            <div class="view-head">
+                <div>
+                    <h2 class="view-title">🍽️ Cat Food Reviews</h2>
+                    <p class="view-sub">Honest ratings from real cat parents, sorted by top-rated.</p>
+                </div>
+                <button class="btn btn-primary sm" id="openFoodForm">+ Write a review</button>
+            </div>
+            <div class="toolbar">
+                <input type="search" class="search" id="foodSearch" placeholder="Search a food or brand…">
+                <select class="filter" id="foodSort">
+                    <option value="top">Top rated</option>
+                    <option value="new">Newest</option>
+                    <option value="low">Lowest rated</option>
+                </select>
+            </div>
+            <div class="reviews" id="foodList"></div>
+        </section>
+
+        <!-- ============ SAVED ============ -->
+        <section class="view" id="view-saved" hidden>
+            <div class="view-head">
+                <div>
+                    <h2 class="view-title">♥ Saved Cats</h2>
+                    <p class="view-sub">Everything you've liked across Breeds &amp; Adopt lives here.</p>
+                </div>
+            </div>
+            <div class="grid" id="savedGrid"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Made with 🧶 for cat people · SleepyCat</p>
+        <p class="footer-fine">Browse-only demo — contact owners directly. No matching, no tracking, just cats.</p>
+    </footer>
+
+    <!-- ============ MODAL ROOT ============ -->
+    <div class="modal-root" id="modalRoot" hidden>
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-card" id="modalCard" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
