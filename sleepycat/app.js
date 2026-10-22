@@ -12,8 +12,7 @@
   const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const uid = (p) => p + Math.random().toString(36).slice(2, 9);
-  const GRADS = ['linear-gradient(135deg,#ffd7ba,#ffb385)','linear-gradient(135deg,#d9c7ff,#b49dff)','linear-gradient(135deg,#bde7d6,#8fe0bf)','linear-gradient(135deg,#ffe3a8,#ffcf6b)','linear-gradient(135deg,#ffc9c9,#ff9a9a)','linear-gradient(135deg,#c3e5ff,#93cdff)'];
-  const CATS = ['🐱','🐈','🐈‍⬛','😺','😸','😻','🙀','😽'];
+  const CATS =['🐱','🐈','🐈‍⬛','😺','😸','😻','🙀','😽'];
   const FOOD_EMO = ['🍗','🐟','🍖','🥣','🐾','🥫'];
   const ACCENTS = [
     { name: 'Coral', hex: '#ff6b4a' }, { name: 'Peach', hex: '#ff9a5c' }, { name: 'Bubblegum', hex: '#ff6fae' },
@@ -180,11 +179,11 @@
   /* ---------- PHOTO helper ---------- */
   function photo(item, i, badge) {
     if (item.img) return `<div class="card-photo" style="background-image:url(${esc(item.img)})">${badge || ''}<button class="like-btn ${saveState(item.id)?'liked':''}" data-like="${item.id}" aria-label="Save">${saveState(item.id)?'♥':'♡'}</button></div>`;
-    return `<div class="card-photo" style="background:${GRADS[i % GRADS.length]}">${badge || ''}<button class="like-btn ${saveState(item.id)?'liked':''}" data-like="${item.id}" aria-label="Save">${saveState(item.id)?'♥':'♡'}</button><span class="emoji">${item.emoji || '🐱'}</span></div>`;
+    return `<div class="card-photo pg${i % 6}">${badge || ''}<button class="like-btn ${saveState(item.id)?'liked':''}" data-like="${item.id}" aria-label="Save">${saveState(item.id)?'♥':'♡'}</button><span class="emoji">${item.emoji || '🐱'}</span></div>`;
   }
   function photoLost(item, i, badge) {
     if (item.img) return `<div class="card-photo" style="background-image:url(${esc(item.img)})">${badge}</div>`;
-    return `<div class="card-photo" style="background:${GRADS[(i+2) % GRADS.length]}">${badge}<span class="emoji">${item.emoji || '😿'}</span></div>`;
+    return `<div class="card-photo pg${(i+2) % 6}">${badge}<span class="emoji">${item.emoji || '😿'}</span></div>`;
   }
   const saveState = (id) => state.saved.includes(id);
 
@@ -267,7 +266,7 @@
       const r = el('article', 'review'); r.style.animationDelay = (i % 12) * 0.045 + 's';
       r.innerHTML = `
         <div class="review-top">
-          <div class="food-avatar" style="background:${GRADS[i % GRADS.length]}">${f.emoji || '🍽️'}</div>
+          <div class="food-avatar">${f.emoji || '🍽️'}</div>
           <div><div class="review-food">${esc(f.food)}</div><div class="review-brand">${esc(f.brand)}</div></div>
           <div class="stars">${starHTML(f.rating)}<span class="rating-num">${Number(f.rating).toFixed(1)}</span></div>
         </div>
